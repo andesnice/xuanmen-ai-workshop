@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#174b42">
+  <meta name="description" content="玄門正宗 AI 助理實作課：不用會寫程式，約 2 小時邊講邊做，做出自己的工作小幫手。每人 NT$500，預計約 10 人成班。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="zh_TW">
+  <meta property="og:title" content="AI 助理實作課｜玄門正宗">
+  <meta property="og:description" content="帶著一件繁雜的工作，做出自己的 AI 小幫手。預計約 2 小時，每人 NT$500，預計約 10 人成班。">
+  <title>AI 助理實作課｜玄門正宗</title>
+  <style>
+    :root{--green:#174b42;--deep:#123d35;--mint:#d9ebe3;--paper:#f6f3ec;--ink:#22342e;--muted:#53665e;--line:#d6dfd5;--orange:#f1b477}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:24px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans TC","Noto Sans CJK TC","Microsoft JhengHei",system-ui,sans-serif;font-size:17px;line-height:1.8}
+    a{color:inherit}a:focus-visible{outline:3px solid #bb651d;outline-offset:5px}p,h1,h2,h3{margin-top:0}.wrap{width:min(1080px,100% - 48px);margin-inline:auto}.skip{position:absolute;left:16px;top:-100px;background:white;color:var(--ink);padding:10px;z-index:10}.skip:focus{top:12px}
+    .top,.hero{background:var(--green);color:white}.top .wrap{display:flex;justify-content:space-between;align-items:center;padding-block:23px;gap:20px}.brand{font-size:17px;font-weight:700;letter-spacing:.12em}.brand small{font-size:12px;letter-spacing:.15em;opacity:.7;margin-left:13px}.nav{display:flex;gap:25px}.nav a{text-decoration:none;font-size:14px;color:#e0eee7}.nav a:hover{text-decoration:underline}
+    .hero{padding:65px 0 78px}.hero-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:65px;align-items:center}.eyebrow{display:flex;align-items:center;gap:11px;color:#c7e5d6;font-size:13px;letter-spacing:.15em;font-weight:600}.eyebrow:before{content:"";width:25px;height:1px;background:var(--orange)}h1{font-size:clamp(42px,5.5vw,65px);letter-spacing:-.045em;line-height:1.22;margin:22px 0 24px}h1 span{display:block;color:#f4c596;font-size:.63em;letter-spacing:0;margin-top:13px}.intro{max-width:570px;color:#e1eee7;font-size:18px;margin-bottom:25px}.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{border:1px solid #71998c;border-radius:30px;padding:3px 13px;font-size:13px;color:#e3eee6}.cta{display:inline-flex;align-items:center;gap:25px;background:var(--orange);color:#21382d;border-radius:9px;padding:11px 22px;font-size:15px;font-weight:700;text-decoration:none;margin-top:28px}.cta:hover{background:#ffca91}
+    .workcard{background:#f6f3ec;color:var(--ink);padding:28px;border-radius:18px;transform:rotate(2deg);box-shadow:0 22px 60px #07291d33}.worktop{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line);padding-bottom:14px;color:var(--muted);font-size:12px;letter-spacing:.12em}.dots{letter-spacing:4px;color:#86a694}.bubble{margin:24px 0 0;padding:16px;border-radius:13px 13px 3px 13px;background:#e2e9df;font-size:15px}.reply{background:white;border:1px solid var(--line);border-radius:13px 13px 13px 3px;margin-top:12px}.reply strong{display:block;color:var(--green);margin-bottom:6px;font-size:13px}.example-note{font-size:12px;color:var(--muted);margin:16px 0 0}.result-line{border-top:1px solid var(--line);padding-top:16px;margin-top:20px;font-size:13px;color:var(--green)}
+    .facts{border-bottom:1px solid var(--line);background:#ecefe5}.fact-grid{display:grid;grid-template-columns:repeat(3,1fr);padding-block:26px}.fact{text-align:center;border-right:1px solid #cbd7cb}.fact:last-child{border:0}.fact small{display:block;color:var(--muted);font-size:13px}.fact strong{font-size:25px;font-weight:700}.fact strong span{font-size:15px;font-weight:400;margin-left:5px}
+    section.content{padding-block:73px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}.section-head p{color:var(--muted);font-size:15px;max-width:390px;margin-bottom:3px}.label{font-size:12px;letter-spacing:.16em;color:#89613b;margin-bottom:9px;font-weight:700}h2{font-size:clamp(28px,3vw,37px);line-height:1.4;letter-spacing:-.035em;margin-bottom:0}.learn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.learn{border:1px solid var(--line);border-radius:14px;padding:25px;background:#fffdf9;display:grid;grid-template-columns:42px 1fr;gap:16px}.num{color:#6b8375;font-size:13px;font-weight:700;letter-spacing:.07em;padding-top:5px}.learn h3{font-size:19px;margin-bottom:7px}.learn p{font-size:15px;line-height:1.9;color:var(--muted);margin-bottom:0}
+    .take-section{background:#e6eee5}.take-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:30px}.take{background:#ffffffa8;border-radius:14px;padding:25px}.take-icon{font-size:12px;letter-spacing:.16em;color:var(--green);font-weight:700}.take h3{font-size:20px;margin:13px 0 9px}.take p{font-size:15px;color:var(--muted);margin:0}
+    .info-layout{display:grid;grid-template-columns:1fr 1fr;gap:55px}.prep-list{list-style:none;margin:26px 0 0;padding:0}.prep-list li{display:flex;gap:14px;align-items:baseline;margin-top:17px}.check{color:var(--green);font-weight:700}.prep-list strong{font-size:18px}.prep-list p{margin:1px 0 0;color:var(--muted);font-size:14px}.info-card{background:white;border:1px solid var(--line);border-radius:16px;padding:28px}.info-card h3{font-size:20px;margin-bottom:19px}.info-card dl{margin:0}.info-row{display:grid;grid-template-columns:65px 1fr;gap:15px;padding-block:12px;border-top:1px solid #e7ebe4;font-size:15px}.info-row dt{color:var(--muted)}.info-row dd{margin:0;font-weight:600}.pending{border-top:1px solid #e7ebe4;padding-top:18px;margin:12px 0 0;color:var(--muted);font-size:14px}.pending strong{display:block;color:var(--green);margin-bottom:4px}
+    .closing{background:var(--green);color:white;padding-block:39px}.closing .wrap{display:flex;justify-content:space-between;align-items:center;gap:25px}.closing h2{font-size:24px}.closing p{margin:5px 0 0;color:#d0e5d8;font-size:14px}.closing-mark{font-size:12px;letter-spacing:.16em;color:#bed9cb;white-space:nowrap}footer{padding-block:22px;color:var(--muted);font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:15px}
+    @media(max-width:760px){.wrap{width:calc(100% - 36px)}.brand small{display:none}.top .wrap{padding-block:18px}.nav{gap:17px}.nav a{font-size:12px}.hero{padding:35px 0 45px}.hero-grid{grid-template-columns:1fr;gap:34px}h1{font-size:43px}.intro{font-size:16px}.workcard{max-width:500px;width:calc(100% - 8px);margin-inline:auto;transform:rotate(1deg);padding:22px}.bubble{margin-top:16px}.reply{margin-top:10px}.fact-grid{padding-block:23px}.fact strong{font-size:21px}.fact strong span{font-size:12px;margin-left:2px}.fact small{font-size:11px}.section-head{display:block}.section-head p{margin:12px 0 0}.learn-grid,.take-grid,.info-layout{grid-template-columns:1fr}.learn{padding:21px;grid-template-columns:28px 1fr;gap:11px}.take-grid{gap:13px}.take{padding:23px}.info-layout{gap:34px}section.content{padding-block:47px}.closing .wrap{display:block}.closing-mark{margin-top:22px}footer .wrap{display:block}footer span{display:block}.info-card{padding:23px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{.nav,.cta,.skip{display:none}.hero{padding-block:25px}.workcard{transform:none;box-shadow:none}section.content{padding-block:28px}.take,.learn,.info-card{break-inside:avoid}.closing{padding-block:20px}body{font-size:14px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳至課程內容</a>
+  <header class="top"><div class="wrap"><div class="brand">玄門正宗<small>AI WORKSHOP</small></div><nav class="nav" aria-label="課程導覽"><a href="#learn">課程內容</a><a href="#info">課程資訊</a></nav></div></header>
+  <main id="main">
+    <section class="hero" aria-labelledby="title"><div class="wrap hero-grid">
+      <div><div class="eyebrow">從一件工作，開始認識 AI</div><h1 id="title">AI 助理實作課<span>做出自己的工作小幫手</span></h1><p class="intro">不用會寫程式。帶著一件平常覺得繁雜的工作，跟著現場操作，把 GPT 調整成符合自己習慣的 AI 助理。</p><div class="tags"><span class="tag">新手也能跟著做</span><span class="tag">小班實作</span><span class="tag">用自己的題目練習</span></div><a class="cta" href="#learn">看看這堂課教什麼 <span aria-hidden="true">↘</span></a></div>
+      <aside class="workcard" aria-label="課堂對話示意"><div class="worktop"><span>我的 AI 小幫手</span><span class="dots" aria-hidden="true">● ● ●</span></div><div class="bubble">我每次整理筆記都要花很久，<br>可以幫我整理成重點和待辦嗎？</div><div class="bubble reply"><strong>AI 助理</strong>可以。我們先從一個問題開始：<br>你希望整理好的筆記長什麼樣子？</div><p class="example-note">課堂對話示意・也可以換成你自己的工作</p><div class="result-line">一件繁雜的事 → 一份自己的助理設定</div></aside>
+    </div></section>
+    <div class="facts" aria-label="課程重點"><div class="wrap fact-grid"><div class="fact"><small>預計課程時間</small><strong>約 2<span>小時</span></strong></div><div class="fact"><small>每人報名費</small><strong>NT$500</strong></div><div class="fact"><small>預計成班人數</small><strong>約 10<span>人</span></strong></div></div></div>
+    <section class="content" id="learn" aria-labelledby="learn-title"><div class="wrap"><div class="section-head"><div><div class="label">LEARN BY DOING</div><h2 id="learn-title">這堂課會教什麼？</h2></div><p>老師邊講，你邊操作。<br>從說清楚需求，到用自己的題目實際做一次。</p></div><div class="learn-grid">
+      <article class="learn"><div class="num">01</div><div><h3>把需求說清楚</h3><p>讓 AI 知道你要它幫什麼忙，以及最後要交付什麼結果。</p></div></article>
+      <article class="learn"><div class="num">02</div><div><h3>設定你的助理</h3><p>訂好角色、回覆風格與做事規則，讓它更符合你的工作習慣。</p></div></article>
+      <article class="learn"><div class="num">03</div><div><h3>拿自己的題目來做</h3><p>整理筆記、撰寫文案、規劃待辦，都可以成為現場練習的題目。</p></div></article>
+      <article class="learn"><div class="num">04</div><div><h3>檢查結果，再調整</h3><p>看回答是否符合需要，練習修改，留下可以重複使用的助理設定。</p></div></article>
+    </div></div></section>
+    <section class="content take-section" aria-labelledby="take-title"><div class="wrap"><div class="label">TAKE IT WITH YOU</div><h2 id="take-title">上完課，帶走這三件事</h2><div class="take-grid">
+      <article class="take"><div class="take-icon">01 / 你的設定</div><h3>自己的 AI 助理設定</h3><p>把用途、習慣和規則整理下來，之後可以繼續使用與調整。</p></article>
+      <article class="take"><div class="take-icon">02 / 你的成果</div><h3>一次實際完成的練習</h3><p>用自己的題目跑過一次，知道哪裡有幫助、哪裡還需要修改。</p></article>
+      <article class="take"><div class="take-icon">03 / 課後練習</div><h3>課後提供的引導技能</h3><p>把逐步引導的方法帶回去，方便繼續練習，不必全部從頭想。</p></article>
+    </div></div></section>
+    <section class="content" id="info" aria-labelledby="prep-title"><div class="wrap info-layout"><div><div class="label">COME PREPARED</div><h2 id="prep-title">來上課，準備這三樣就好</h2><ul class="prep-list">
+      <li><span class="check" aria-hidden="true">✓</span><div><strong>筆電</strong><p>帶著自己的電腦，現場跟著操作。</p></div></li>
+      <li><span class="check" aria-hidden="true">✓</span><div><strong>GPT 訂閱</strong><p>課堂使用你自己的 GPT 帳號練習。</p></div></li>
+      <li><span class="check" aria-hidden="true">✓</span><div><strong>一件繁雜的工作</strong><p>選一件你平常覺得麻煩、想交給 AI 幫忙的事。</p></div></li>
+    </ul></div><aside class="info-card" aria-labelledby="info-title"><h3 id="info-title">課程資訊</h3><dl><div class="info-row"><dt>時間</dt><dd>預計約 2 小時，邊講邊操作</dd></div><div class="info-row"><dt>費用</dt><dd>每人 NT$500</dd></div><div class="info-row"><dt>人數</dt><dd>預計約 10 人成班，小班實作</dd></div></dl><p class="pending"><strong>日期、地點與報名方式：待確認</strong>確認後會更新在這裡。</p></aside></div></section>
+    <section class="closing" aria-label="課程結語"><div class="wrap"><div><h2>不用先懂很多，先做出一件有用的事。</h2><p>帶著你的工作來，一起做出自己的 AI 小幫手。</p></div><div class="closing-mark">玄門正宗 / AI 助理實作課</div></div></section>
+  </main>
+  <footer><div class="wrap"><span>玄門正宗｜AI 助理實作課</span><span>課程介紹・日期、地點與報名方式待確認</span></div></footer>
+</body>
+</html>
